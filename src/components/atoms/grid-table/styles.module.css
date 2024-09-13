@@ -1,0 +1,29 @@
+.GridItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  padding: 13px 4px;
+}
+
+.GridItem::before,
+.GridItem::after {
+  content: "";
+  position: absolute;
+
+  z-index: 1;
+}
+
+.GridItem::after {
+  inline-size: 100vw;
+  block-size: 1px;
+  inset-inline-start: 0;
+  inset-block-start: -1px;
+}
+.GridItem::before {
+  inline-size: 1px;
+  block-size: 100vh;
+  inset-block-start: 0;
+  inset-inline-start: -1px;
+}
