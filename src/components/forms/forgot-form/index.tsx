@@ -21,13 +21,13 @@ export const ForgotForm: FC<ForgotFormProps> = ({ form }) => {
                 name={path("forgot_email")}
                 render={({ field }) => (
                     <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel className="font-semibold text-[15px] leading-4 mb-[15px]">Email</FormLabel>
                         <FormControl>
                             <Input
                                 placeholder="Введите ваш email"
                                 {...field}
                                 type="email"
-                                className="h-12"
+                                className="h-[54px]"
                             />
                         </FormControl>
                         <FormMessage />

@@ -18,22 +18,22 @@ interface RegisterFormProps {
 export const RegisterForm: FC<RegisterFormProps> = ({ form }) => {
     const { control, path } = form;
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start justify-start">
-            <div className="grid grid-cols-1 gap-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] items-start justify-start">
+            <div className="grid grid-cols-1 gap-3">
                 <FormField
                     control={control}
                     name={path("reg_name")}
                     render={({ field }) => {
                         return (
                             <FormItem>
-                                <FormLabel className="font-medium">
+                                <FormLabel className="font-semibold text-[15px] leading-4 mb-[15px]">
                                     Имя*
                                 </FormLabel>
                                 <FormControl>
                                     <Input
                                         {...field}
                                         placeholder="Введите ваше имя"
-                                        className="h-12"
+                                        className="h-[54px]"
                                     />
                                 </FormControl>
                                 <FormMessage />
@@ -47,7 +47,7 @@ export const RegisterForm: FC<RegisterFormProps> = ({ form }) => {
                     render={({ field }) => {
                         return (
                             <FormItem>
-                                <FormLabel className="font-medium">
+                                <FormLabel className="font-semibold text-[15px] leading-4 mb-[15px]">
                                     Email*
                                 </FormLabel>
                                 <FormControl>
@@ -55,7 +55,7 @@ export const RegisterForm: FC<RegisterFormProps> = ({ form }) => {
                                         {...field}
                                         type="email"
                                         placeholder="Введите ваш email"
-                                        className="h-12"
+                                        className="h-[54px]"
                                     />
                                 </FormControl>
                                 <FormMessage />
@@ -69,14 +69,14 @@ export const RegisterForm: FC<RegisterFormProps> = ({ form }) => {
                     render={({ field }) => {
                         return (
                             <FormItem>
-                                <FormLabel className="font-medium">
+                                <FormLabel className="font-semibold text-[15px] leading-4 mb-[15px]">
                                     Телефон
                                 </FormLabel>
                                 <FormControl>
                                     <PhoneInput
                                         {...field}
                                         placeholder="Введите ваш телефон"
-                                        className="h-12"
+                                        className="h-[54px]"
                                     />
                                 </FormControl>
                                 <FormMessage />
@@ -85,21 +85,21 @@ export const RegisterForm: FC<RegisterFormProps> = ({ form }) => {
                     }}
                 />
             </div>
-            <div className="grid grid-cols-1 gap-2">
+            <div className="grid grid-cols-1 gap-3">
                 <FormField
                     control={control}
                     name={path("reg_password")}
                     render={({ field }) => {
                         return (
                             <FormItem>
-                                <FormLabel className="font-medium">
+                                <FormLabel className="font-semibold text-[15px] leading-4 mb-[15px]">
                                     Придумайте пароль*
                                 </FormLabel>
                                 <FormControl>
                                     <PasswordInput
                                         {...field}
                                         placeholder="Введите ваш пароль"
-                                        className="h-12"
+                                        className="h-[54px]"
                                     />
                                 </FormControl>
                                 <FormMessage />
@@ -113,14 +113,14 @@ export const RegisterForm: FC<RegisterFormProps> = ({ form }) => {
                     render={({ field }) => {
                         return (
                             <FormItem>
-                                <FormLabel className="font-medium">
+                                <FormLabel className="font-semibold text-[15px] leading-4 mb-[15px]">
                                     Повторите пароль*
                                 </FormLabel>
                                 <FormControl>
                                     <PasswordInput
                                         {...field}
                                         placeholder="Повторите ваш пароль"
-                                        className="h-12"
+                                        className="h-[54px]"
                                     />
                                 </FormControl>
                                 <FormMessage />
@@ -134,14 +134,14 @@ export const RegisterForm: FC<RegisterFormProps> = ({ form }) => {
                     render={({ field }) => {
                         return (
                             <FormItem>
-                                <FormLabel className="font-medium">
+                                <FormLabel className="font-semibold text-[15px] leading-4 mb-[15px]">
                                     Телеграмм акк*
                                 </FormLabel>
                                 <FormControl>
                                     <Input
                                         {...field}
                                         placeholder="Введите TG"
-                                        className="h-12"
+                                        className="h-[54px]"
                                     />
                                 </FormControl>
                                 <FormMessage />

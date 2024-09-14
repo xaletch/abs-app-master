@@ -1,4 +1,6 @@
 import { useRegisterMutation } from "@/api/Auth";
+import { Logo } from "@/components/atoms/logo";
+import { Telegram } from "@/components/atoms/Telegram/Telegram";
 import { RegisterForm } from "@/components/forms/register-form";
 import { registerSchema } from "@/components/forms/register-form/schema";
 import { Button } from "@/components/ui/button";
@@ -59,8 +61,9 @@ export const Register = () => {
     }, [setTheme]);
     return (
         <div className="w-full h-dvh flex items-center justify-center px-4">
-            <Card className="border-0 rounded-3xl max-w-4xl w-full">
-                <CardHeader className="px-11 py-10">
+            <Card className="border-0 rounded-3xl max-w-[1020px] w-full px-[45px] pt-8 pb-11">
+                <Logo />
+                <CardHeader>
                     <CardTitle>Регистрация пользователя</CardTitle>
                     <CardDescription>
                         Введите данные учетной записи для авторизации
@@ -68,21 +71,21 @@ export const Register = () => {
                 </CardHeader>
                 <form onSubmit={form.handleSubmit(onRegister)}>
                     <Form {...form}>
-                        <CardContent className="px-11 pt-0">
+                        <CardContent>
                             <RegisterForm form={nestedForm(form, "register")} />
-                            <div className="grid grid-cols-2">
+                            <div className="grid grid-cols-2 gap-[30px]">
                                 <LoadingButton
                                     loading={isLoading}
                                     type="submit"
-                                    className="w-full mt-10 h-12"
+                                    className="w-full mt-6 mb-8 h-[55px] text-[16px] text-[#021425]"
                                 >
                                     Авторизаться
                                 </LoadingButton>
                             </div>
                         </CardContent>
-                        <div className="grid grid-cols-2 px-11">
-                            <CardFooter className="flex flex-col gap-4 pb-10 px-0">
-                                <div className="flex items-center justify-center w-full">
+                        <div className="grid grid-cols-2 gap-[30px]">
+                            <CardFooter className="flex flex-col pb-10 px-0">
+                                <div className="flex items-center justify-center w-full text-[13.5px] h-3 pb-6">
                                     <p>У вас уже есть учетная запись?</p>
                                     <Link to="/login">
                                         <Button variant={"link"} type="button">
@@ -94,36 +97,34 @@ export const Register = () => {
                                     <div className="absolute inset-0 flex items-center">
                                         <span className="w-full border-t" />
                                     </div>
-                                    <div className="relative flex justify-center text-xs uppercase">
+                                    <div className="relative flex justify-center text-[13.5px] font-medium">
                                         <span className="bg-background px-2 text-muted-foreground">
                                             Помощь
                                         </span>
                                     </div>
                                 </div>
-                                <div className="grid grid-cols-2 gap-2 w-full">
-                                    <a
-                                        href="https://t.me/anatskoK"
-                                        target="_blank"
+                                <div className="grid grid-cols-2 gap-3 w-full mt-8">
+                                <a href="https://t.me/anatskoK" target="_blank">
+                                    <Button
+                                        className="w-full h-12 text-[14px] font-normal gap-[7px]"
+                                        variant={"outline"}
+                                        type="button"
                                     >
-                                        <Button
-                                            className="w-full h-12"
-                                            variant={"outline"}
-                                            type="button"
-                                        >
-                                            @anatskoK
-                                        </Button>
-                                    </a>
-                                    <a href="tel:+74951351660" target="_blank">
-                                        <Button
-                                            className="w-full h-12"
-                                            variant={"outline"}
-                                            type="button"
-                                        >
-                                            <Phone />
-                                            +7 (495) 135-16-60
-                                        </Button>
-                                    </a>
-                                </div>
+                                        <Telegram />
+                                        @anatskoK
+                                    </Button>
+                                </a>
+                                <a href="tel:+74951351660" target="_blank">
+                                    <Button
+                                        className="w-full h-12 text-[14px] font-normal gap-[7px]"
+                                        variant={"outline"}
+                                        type="button"
+                                    >
+                                        <Phone />
+                                        +7 (495) 135-16-60
+                                    </Button>
+                                </a>
+                            </div>
                             </CardFooter>
                         </div>
                     </Form>

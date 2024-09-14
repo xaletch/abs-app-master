@@ -112,7 +112,7 @@ export const Login = () => {
                                     </span>
                                 </div>
                             </div>
-                            <div className="grid grid-cols-2 gap-2 w-full mt-8">
+                            <div className="grid grid-cols-2 gap-3 w-full mt-8">
                                 <a href="https://t.me/anatskoK" target="_blank">
                                     <Button
                                         className="w-full h-12 text-[14px] font-normal gap-[7px]"

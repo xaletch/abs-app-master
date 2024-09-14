@@ -25,7 +25,7 @@ export const LoginForm: FC<LoginFormProps> = ({ form }) => {
                 render={({ field }) => {
                     return (
                         <FormItem>
-                            <FormLabel className="font-semibold leading-4 mb-[15px]">Email</FormLabel>
+                            <FormLabel className="font-semibold text-[15px] leading-4 mb-[15px]">Email</FormLabel>
                             <FormControl>
                                 <Input
                                     {...field}
@@ -46,7 +46,7 @@ export const LoginForm: FC<LoginFormProps> = ({ form }) => {
                     return (
                         <FormItem>
                             <div className="flex items-center justify-between">
-                                <FormLabel className="font-semibold leading-4">
+                                <FormLabel className="font-semibold text-[15px]">
                                     Пароль
                                 </FormLabel>
                                 <Link to="/forgot">
