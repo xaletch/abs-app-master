@@ -135,7 +135,7 @@ export const RegisterForm: FC<RegisterFormProps> = ({ form }) => {
                         return (
                             <FormItem>
                                 <FormLabel className="font-semibold text-[15px] leading-4 mb-[15px]">
-                                    Телеграмм акк*
+                                    Телеграмм акк
                                 </FormLabel>
                                 <FormControl>
                                     <Input

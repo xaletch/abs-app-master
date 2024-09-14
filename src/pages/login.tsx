@@ -29,6 +29,7 @@ import { InferType, object } from "yup";
 const schema = object({
     login: loginSchmea,
 });
+// {"value":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjExMTcwOTE4MTAsImhhc2giOiJmYmQ5YzAwYmE0ZGRkYmMxMDg2OWY2OTdiYzUwM2JkY2M2ZTc5NjA4YjI3ODhiMDlhNmI0OTdjYTlkMTZhYWVkIiwiaWF0IjoxNzI1MTgzNzE0LCJleHAiOjE3MjUyNzAxMTR9.lSd-E4MYyk_4gGeT01Jseb3NH7KhV6x8Vn2-BJatAcs","expiry":1725270114399}
 export const Login = () => {
     const { setTheme } = useTheme();
     const [login, { isLoading }] = useLoginMutation();

@@ -8,7 +8,7 @@ export const registerSchema = object({
     reg_password2: string()
         .oneOf([ref("reg_password")], "Пароли должны быть похожи")
         .required("Это поле обязательно для заполнения"),
-    reg_tg: string().required("Это поле обязательно для заполнения"),
+    reg_tg: string(),
 });
 
 export type RegisterType = InferType<typeof registerSchema>;

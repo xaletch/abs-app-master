@@ -32,8 +32,8 @@ export const UpdateProfile: FC<UpdateProfileProps> = ({ user }) => {
             profile: {
                 email: user.email,
                 name: user.name,
-                second_name: user.second_name,
-                surname: user.surname,
+                // second_name: user.second_name,
+                // surname: user.surname,
                 tg: user.tg,
             },
         },
@@ -63,8 +63,9 @@ export const UpdateProfile: FC<UpdateProfileProps> = ({ user }) => {
             <CardHeader>
                 <CardTitle>Настройки профиля</CardTitle>
                 <CardDescription>
-                    Здесь вы можете легко управлять параметрами, чтобы создать
-                    идеальное рабочее окружение
+                    Здесь вы можете легко управлять параметрами, чтобы создать идеальное 
+                    <br />
+                    рабочее окружение
                 </CardDescription>
             </CardHeader>
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -72,9 +73,9 @@ export const UpdateProfile: FC<UpdateProfileProps> = ({ user }) => {
                     <CardContent>
                         <ProfileForm form={nestedForm(form, "profile")} />
                     </CardContent>
-                    <CardFooter className="flex justify-between">
+                    <CardFooter className="mt-5 2xl:mt-7 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
                         <LoadingButton
-                            className="h-10"
+                            className="h-[54px] text-[15px] rounded-lg"
                             type="submit"
                             loading={isLoading}
                         >
