@@ -19937,33 +19937,56 @@ export const SectionPage = () => {
                                     М-1:
                                 </div>
                                 <div className="text-[13px] text-foreground/60 font-medium">
-                                    Добрый день!{" "}
+                                    Здравствуйте, меня зовут "Имя" (звоню Вам так как вы искали квартиру в новостройке )
+                                    Подскажите, вы купили квартиру, или ещё в поиске?
                                 </div>
+                            </div>
+                            <div className="flex gap-2 my-4">
+                                <Button>Купил</Button>
+                                <Button>В поиске</Button>
                             </div>
                             <div className="flex gap-2">
                                 <div className="text-[13px] font-medium">
                                     М-2:
                                 </div>
                                 <div className="text-[13px] text-foreground/60 font-medium">
-                                    Меня зовут ... Правильно ли я понимаю
+                                    Как я могу к Вам обращаться?
                                 </div>
+                            </div>
+                            <div className="flex gap-3 items-center my-4">
+                                <div className="text-[13px] font-medium">
+                                    Ваше имя
+                                </div>
+                                <Input
+                                    placeholder="Ваше имя"
+                                    className="max-w-44 text-sm"
+                                />
                             </div>
                             <div className="flex gap-2">
                                 <div className="text-[13px] font-medium">
                                     М-3:
                                 </div>
                                 <div className="text-[13px] text-foreground/60 font-medium">
-                                    Отлично! Я предложу самые{" "}
+                                    “Имя”, какой город рассматриваете ?
                                 </div>
                             </div>
                         </div>
                         <div className="flex gap-2">
-                            <Button>Вся МО</Button>
-                            <Button>Ю_МО</Button>
-                            <Button>3_МО</Button>
-                            <Button>C_МО</Button>
+                            <Button>Москва</Button>
+                            <Button>Московская обл</Button>
+                            <Button>Санкт-Петербург</Button>
+                            <Button>Ленинградская область</Button>
                         </div>
-                        <div className="flex gap-2">
+                        <div className="flex gap-3 items-center">
+                            <div className="text-[13px] font-medium">
+                                Другой
+                            </div>
+                            <Input
+                                placeholder="Город"
+                                className="max-w-44 text-sm"
+                            />
+                        </div>
+                        {/* <div className="flex gap-2">
                             <Button>М</Button>
                             <Button>МО</Button>
                             <Button>Апартаменты</Button>
@@ -19971,12 +19994,52 @@ export const SectionPage = () => {
                         <div className="text-[13px] font-medium">
                             Не забудьте расширить запрос по ГЕО - не
                             зацикливайтесь на одной локации в ближайших проектах
-                        </div>
+                        </div> */}
                         <div className="flex gap-2">
                             <div className="text-[13px] font-medium">М-4:</div>
                             <div className="text-[13px] text-foreground/60 font-medium">
-                                Так, в каком бюджете смотрите квартиру и сколько
-                                комнат в ней должно быть?
+                                Отлично, мы подберем варианты под ваши критерии поиска.
+                            </div>
+                        </div>
+                        <div className="flex gap-2">
+                            <div className="text-[13px] font-medium">М-5:</div>
+                            <div className="text-[13px] text-foreground/60 font-medium">
+                                Какое направление рассматриваете, север, юг, запад, восток ?
+                            </div>
+                        </div>
+                        <div className="flex gap-2">
+                            <Button>Север</Button>
+                            <Button>Юг</Button>
+                            <Button>Запад</Button>
+                            <Button>Восток</Button>
+                            <Button>Новая москва (только для Москвы)</Button>
+                        </div>
+                        <div className="flex gap-2">
+                            <div className="text-[13px] font-medium">М-6:</div>
+                            <div className="text-[13px] text-foreground/60 font-medium">
+                                Сколько комнат рассматриваете ?
+                            </div>
+                        </div>
+                        <div className="flex gap-2">
+                            <Button>Ст</Button>
+                            <Button>1кк</Button>
+                            <Button>2кк</Button>
+                            <Button>3кк</Button>
+                            <Button>4кк</Button>
+                        </div>
+                        <div className="flex gap-3 items-center">
+                            <div className="text-[13px] font-medium">
+                                Мин. площадь
+                            </div>
+                            <Input
+                                placeholder="Мин. площадь"
+                                className="max-w-44 text-sm"
+                            />
+                        </div>
+                        <div className="flex gap-2">
+                            <div className="text-[13px] font-medium">М-7:</div>
+                            <div className="text-[13px] text-foreground/60 font-medium">
+                                Какой бюджет ?
                             </div>
                         </div>
                         <div className="flex items-center gap-3 justify-between">
@@ -19989,161 +20052,89 @@ export const SectionPage = () => {
                                     className="max-w-44 text-sm"
                                 />
                             </div>
-                            <div className="flex gap-3 items-center">
-                                <div className="text-[13px] font-medium">
-                                    Мин. площадь
-                                </div>
-                                <Input
-                                    placeholder="Мин. площадь"
-                                    className="max-w-44 text-sm"
-                                />
-                            </div>
-                            <div className="flex gap-2 items-center">
+                            {/* <div className="flex gap-2 items-center">
                                 <div className="text-[13px] font-medium">
                                     Ремонт
                                 </div>
                                 <Button>Да</Button>
                                 <Button>Нет</Button>
-                            </div>
-                        </div>
-                        <div className="flex gap-2">
-                            <Button>Ст</Button>
-                            <Button>1кк</Button>
-                            <Button>2кк</Button>
-                            <Button>3кк</Button>
-                            <Button>4кк</Button>
+                            </div> */}
                         </div>
                         <div className="text-[13px] font-medium">
                             Не забудьте расширить запрос по бюджету!!!
                         </div>
                         <div className="flex gap-2">
-                            <div className="text-[13px] font-medium">М-5:</div>
+                            <div className="text-[13px] font-medium">М-8:</div>
                             <div className="text-[13px] text-foreground/60 font-medium">
-                                И финально, какой максимальный срок сдачи готовы
-                                рассматривать?
-                            </div>
-                        </div>
-                        <div className="flex gap-4">
-                            <div className="text-[13px] font-medium">
-                                Срок сдачи
-                            </div>
-                            <div className="flex gap-2 items-center">
-                                <RadioGroup
-                                    defaultValue="comfortable"
-                                    className="flex"
-                                >
-                                    <div className="flex items-center space-x-2">
-                                        <RadioGroupItem
-                                            value="default"
-                                            id="r1"
-                                        />
-                                        <Label
-                                            htmlFor="r1"
-                                            className="text-sm text-foreground/50"
-                                        >
-                                            Сдан
-                                        </Label>
-                                    </div>
-                                    <div className="flex items-center space-x-2">
-                                        <RadioGroupItem
-                                            value="comfortable"
-                                            id="r2"
-                                        />
-                                        <Label
-                                            htmlFor="r2"
-                                            className="text-sm text-foreground/50"
-                                        >
-                                            До 3м
-                                        </Label>
-                                    </div>
-                                    <div className="flex items-center space-x-2">
-                                        <RadioGroupItem value="6" id="r3" />
-                                        <Label
-                                            htmlFor="r3"
-                                            className="text-sm text-foreground/50"
-                                        >
-                                            До 6м
-                                        </Label>
-                                    </div>
-                                    <div className="flex items-center space-x-2">
-                                        <RadioGroupItem value="9" id="r4" />
-                                        <Label
-                                            htmlFor="r4"
-                                            className="text-sm text-foreground/50"
-                                        >
-                                            До 9м
-                                        </Label>
-                                    </div>
-                                    <div className="flex items-center space-x-2">
-                                        <RadioGroupItem value="12" id="r5" />
-                                        <Label
-                                            htmlFor="r4"
-                                            className="text-sm text-foreground/50"
-                                        >
-                                            До 1г
-                                        </Label>
-                                    </div>
-                                    <div className="flex items-center space-x-2">
-                                        <RadioGroupItem
-                                            value="compact"
-                                            id="r6"
-                                        />
-                                        <Label
-                                            htmlFor="18"
-                                            className="text-sm text-foreground/50"
-                                        >
-                                            До 1,5г
-                                        </Label>
-                                    </div>
-                                    <div className="flex items-center space-x-2">
-                                        <RadioGroupItem value="24" id="r7" />
-                                        <Label
-                                            htmlFor="r7"
-                                            className="text-sm text-foreground/50"
-                                        >
-                                            До 2г
-                                        </Label>
-                                    </div>
-                                </RadioGroup>
+                                Скажите, по отделке есть пожелания?
                             </div>
                         </div>
                         <div className="flex gap-2">
-                            <div className="text-[13px] font-medium">М-6:</div>
+                            <Button>Чистовая</Button>
+                            <Button>Предчистовая</Button>
+                            <Button>Без отделки</Button>
+                        </div>
+                        <div className="flex gap-2">
+                            <div className="text-[13px] font-medium">М-9:</div>
                             <div className="text-[13px] text-foreground/60 font-medium">
-                                Начинаем с самого дорогого подходящего проекта -
-                                презентуем проект: местоположение, комнатность и
-                                бюджет, срок сдачи, наличие ремонта, УТП
+                                Как долго готовы ждать выдачу ключей, год, два или больше ?
                             </div>
                         </div>
-                        <div className="flex gap-10">
-                            <div className="flex gap-2 items-center">
-                                <div className="text-[13px] font-medium">
-                                    М-7:
-                                </div>
-                                <div className="flex flex-col gap-3 items-center">
-                                    <Button>Да</Button>
-                                    <div className="text-[13px] text-foreground/60 font-medium">
-                                        Отлично, тогда предлагаю соеденить с
-                                        застройщиком, уточните по этажам,
-                                        площади и другим интересующим вопросам,
-                                        это займет 1-2 минуты
-                                    </div>
-                                </div>
+                        <div className="flex gap-2">
+                            <Button>Сдан</Button>
+                            <Button>2024</Button>
+                            <Button>2025</Button>
+                            <Button>2026</Button>
+                            <Button>2027</Button>
+                        </div>
+                        <div className="flex gap-2">
+                            <div className="text-[13px] font-medium">М-10:</div>
+                            <div className="text-[13px] text-foreground/60 font-medium">
+                                Покупку в ближайшие 3 месяца рассматриваете?
                             </div>
-                            <div className="flex gap-2 items-center">
-                                <div className="text-[13px] font-medium">
-                                    М-8:
-                                </div>
-                                <div className="flex flex-col gap-3 items-center">
-                                    <Button>Нет</Button>
-                                    <div className="text-[13px] text-foreground/60 font-medium">
-                                        Предлагаем проекты, подходящие под
-                                        запрос, где надо дополнительно расширяем
-                                        запросы, чтобы увеличить кол-во
-                                        подходящих проектов
-                                    </div>
-                                </div>
+                        </div>
+                        <div className="flex gap-2 ">
+                            <Button>Да</Button>
+                            <Button>Нет</Button>
+                        </div>
+                        <div className="flex gap-2">
+                            <div className="text-[13px] font-medium">М-11:</div>
+                            <div className="text-[13px] text-foreground/60 font-medium">
+                                Подскажите, вы рассматриваете апартаменты?
                             </div>
+                        </div>
+                        <div className="flex gap-2">
+                            <Button>Да</Button>
+                            <Button>Нет</Button>
+                        </div>
+                        <div className="flex gap-2">
+                            <div className="text-[13px] font-medium">М-12:</div>
+                            <div className="text-[13px] text-foreground/60 font-medium">
+                                Покупку рассматриваете за наличные или в ипотеку ( если ипотека то c Первоначальным взносом или нет)
+                            </div>
+                        </div>
+                        <div className="flex gap-2">
+                            <Button>Наличные</Button>
+                            <Button>Ипотека с первоначальным взносом</Button>
+                            <Button>Ипотека без первоначального взноса</Button>
+                        </div>
+                        <div className="flex gap-2">
+                            <div className="text-[13px] font-medium">М-13:</div>
+                            <div className="text-[13px] text-foreground/60 font-medium">
+                                Отлично , чуть позже мой коллега свяжется с вами и подберет варианты . Ожидайте звонка , всего доброго. До свидания .
+                            </div>
+                        </div>
+                        <div className="flex gap-3 items-center">
+                            <div className="text-[13px] font-medium">
+                                Комментарий
+                            </div>
+                            <Input
+                                placeholder="Комментарий"
+                                className="w-full text-sm"
+                            />
+                        </div>
+                        <div className="w-full flex justify-center">
+                            <Button>Переведен в Циан</Button>
                         </div>
                     </div>
                 </div>
