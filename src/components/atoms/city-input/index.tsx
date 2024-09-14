@@ -7,7 +7,7 @@ import {
     ComboboxOptions,
     Transition,
 } from "@headlessui/react";
-import { Loader2, SearchIcon } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { forwardRef, useState } from "react";
 export interface SuggestInputProps {
     placeholder?: string;
@@ -42,14 +42,14 @@ export const CityInput = forwardRef<HTMLInputElement, SuggestInputProps>(
                 <ComboboxButton className={"w-full p-0 border-0 relative"}>
                     <ComboboxInput
                         className={
-                            "flex h-10 w-full rounded-md border border-input bg-background pl-8 pr-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            "flex h-10 w-full rounded-none border border-input bg-background pl-[14px] pr-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                         }
                         ref={ref}
                         placeholder={placeholder}
                         displayValue={(person) => person?.name}
                         onChange={(event) => setQuery(event.target.value)}
                     />
-                    <SearchIcon className="absolute top-2/4 -translate-y-[50%] left-2 w-4 h-4" />
+                    {/* <SearchIcon className="absolute top-2/4 -translate-y-[50%] left-2 w-4 h-4" /> */}
                     <div
                         className={cn(
                             "absolute w-5 h-5 top-2/4 -translate-y-[50%] right-2 hidden"

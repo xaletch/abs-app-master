@@ -24,11 +24,17 @@ export const DirectoryFilter = () => {
             <Collapsible open={open} onOpenChange={setOpen}>
                 <div className="flex gap-4 flex-col">
                     {!open && (
-                        <Input placeholder="Поиск по Названию ЖК, Застройщика, Округам, Районам, Метро" />
+                        <Input 
+                            placeholder="Поиск по Названию ЖК, Застройщика, Округам, Районам, Метро" 
+                            className="min-h-[42px] rounded-none text-[14px]"
+                        />
                     )}
                     <CollapsibleContent>
                         <div className="flex flex-col gap-4">
-                            <Input placeholder="Поиск по Названию ЖК, Застройщика, Округам, Районам, Метро" />
+                            <Input
+                                placeholder="Поиск по Названию ЖК, Застройщика, Округам, Районам, Метро" 
+                                className="min-h-[42px] rounded-none text-[14px]"
+                            />
                             <div className="flex gap-8  flex-wrap">
                                 <div className="flex flex-col gap-3.5 flex-1">
                                     <div className="flex flex-col gap-2">
@@ -171,7 +177,7 @@ export const DirectoryFilter = () => {
                     <CollapsibleTrigger className="w-full">
                         {!open && (
                             <Button variant={"ghost"} className="w-full ">
-                                <ChevronDown /> Все фильтры
+                                <ChevronDown /> <span className="opacity-60">Все фильтры</span>
                             </Button>
                         )}
                         {open && (

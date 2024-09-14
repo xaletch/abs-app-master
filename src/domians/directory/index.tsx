@@ -4,6 +4,7 @@ import { ObjectMarker } from "@/components/atoms/object-marker";
 import { DirectoryFilter } from "@/components/molecules/directory-filter";
 import { ObjectCard } from "@/components/molecules/object";
 import { ObjectList } from "@/components/organisms/object-list";
+import { ObjectSelectionList } from "@/components/organisms/object-selection-list";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -30,6 +31,7 @@ import {
 import { useEffect, useMemo, useState } from "react";
 import { useMedia } from "react-use";
 import { Drawer } from "vaul";
+import { mockData } from "../selection";
 
 export const DirectoryPage = () => {
     const { data, isLoading } = useGetObjectListQuery();
@@ -130,6 +132,7 @@ export const DirectoryPage = () => {
                                     <div className="flex gap-1 items-center">
                                         <Popover>
                                             <PopoverTrigger>
+                                                <span className={"text-sm leading-[14px] opacity-50"}>Сортировка:</span>
                                                 <Button variant={"ghost"}>
                                                     По приоритету{" "}
                                                     <ChevronDown />
@@ -211,6 +214,21 @@ export const DirectoryPage = () => {
                                             </Button>
                                         );
                                     })}
+                                </div>
+                                <div className="flex-1 ">
+                                    <div className={cn("flex flex-col gap-2")}>
+                                        {mockData && (
+                                            <ObjectSelectionList
+                                            list={mockData}
+                                            modalOpen
+                                        />
+                                        )}
+                                        {isLoading && (
+                                            <div className="flex items-center justify-center">
+                                                <Loader2 className="animate-spin" />
+                                            </div>
+                                        )}
+                                    </div>  
                                 </div>
                             </div>
                             {data && <ObjectList list={data} modalOpen />}

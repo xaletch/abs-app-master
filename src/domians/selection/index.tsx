@@ -25,7 +25,8 @@ import { ObjectSelectionList } from "@/components/organisms/object-selection-lis
 import { useGetObjectListQuery } from "@/api/CRM";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio";
 import { Label } from "@/components/ui/label";
-const mockData = [
+import { Checkbox } from "@/components/ui/checkbox";
+export const mockData = [
     {
         city: "Москва",
         region: "Московская область",
@@ -19898,16 +19899,27 @@ export const SectionPage = () => {
                             Не интересуется покупкой
                         </Button>
                     </div>
-                    <div className="grid grid-cols-4 gap-2">
-                        <Input placeholder="Введите имя" />
-                        <PhoneInput value={phone} onChange={setPhone} />
-                        <PhoneInput value={phone} onChange={setPhone} />
+                    <div className="grid grid-cols-4 items-start gap-2 p-4 pr-[18px] bg-primary/30 opacity-50 pl-[14px] text-sm">
+                        <Input placeholder="Введите имя" className="h-10 rounded-none pl-[14px] text-sm"/>
+                        <div className="flex flex-col gap-2">
+                            <PhoneInput placeholder="Введите телефон" value={phone} onChange={setPhone} className="h-10 rounded-none pl-[14px] text-sm" />
+                            <div className="flex gap-1 items-end">
+                                    <Checkbox id="notify-information" />
+                                        <label
+                                            htmlFor="notify-information"
+                                            className="text-[11px] font-notmal leading-none text-foreground"
+                                        >
+                                            Получать информацию
+                                        </label>
+                                </div>
+                        </div>
+                        <PhoneInput placeholder="Введите телефон" value={phone} onChange={setPhone} className="h-10 rounded-none pl-[14px] text-sm" />
                         <CityInput placeholder="Введите город" />
                     </div>
-                    <div className="grid grid-cols-4 gap-2">
+                    <div className="grid grid-cols-[repeat(3,1fr)_100px] 2xl:grid-cols-[160px_160px_1fr_100px] gap-[10px] p-4 bg-[#172DF2]/10">
                         <Select>
                             <SelectTrigger>
-                                <SelectValue placeholder="Визит в офис" />
+                                <SelectValue placeholder="Визит в офис"  />
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectItem value="1">Сдан1</SelectItem>
@@ -19915,8 +19927,8 @@ export const SectionPage = () => {
                             </SelectContent>
                         </Select>
                         <DatePicker value={date} onChange={setDate} />
-                        <Input />
-                        <Button className="h-10">Добавить</Button>
+                        <Input className="rounded-none px-[14px] text-sm" />
+                        <Button className="h-10 rounded-sm bg-[#172DF2] text-[13px]">Перезвонить</Button>
                     </div>
                     <div className="flex flex-col gap-4 p-3 bg-white">
                         <div className="flex flex-col  ">
@@ -20141,6 +20153,7 @@ export const SectionPage = () => {
                         <div className="flex gap-1 items-center">
                             <Popover>
                                 <PopoverTrigger>
+                                <span className={"text-sm leading-[14px] opacity-50"}>Сортировка:</span>
                                     <Button variant={"ghost"}>
                                         По приоритету <ChevronDown />
                                     </Button>

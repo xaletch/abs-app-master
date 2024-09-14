@@ -24,7 +24,7 @@ export const DatePicker: FC<DatePickerProps> = (props) => {
                 <Button
                     variant={"outline"}
                     className={cn(
-                        " pl-3 px-2 text-base h-10 text-left font-normal",
+                        " pl-3 px-[14px] text-sm h-10 text-left font-normal rounded-none",
                         !value && "text-muted-foreground"
                     )}
                 >
@@ -33,7 +33,7 @@ export const DatePicker: FC<DatePickerProps> = (props) => {
                             locale: ru,
                         })
                     ) : (
-                        <span>Выберите дату</span>
+                        <span className="text-sm">Выберите дату</span>
                     )}
                     <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                 </Button>
