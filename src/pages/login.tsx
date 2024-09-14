@@ -1,4 +1,7 @@
 import { useLoginMutation } from "@/api/Auth";
+import { Logo } from "@/components/atoms/logo";
+import { Phone } from "@/components/atoms/Phone/Phone";
+import { Telegram } from "@/components/atoms/Telegram/Telegram";
 import { LoginForm } from "@/components/forms/login-form";
 import { loginSchmea } from "@/components/forms/login-form/schema";
 import { Button } from "@/components/ui/button";
@@ -18,7 +21,6 @@ import { nestedForm } from "@/lib/nested-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { addDays } from "date-fns";
-import { Phone } from "lucide-react";
 import qs from "qs";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
@@ -71,8 +73,9 @@ export const Login = () => {
     }, [setTheme]);
     return (
         <div className="w-full h-dvh flex items-center justify-center px-4">
-            <Card className="border-0 rounded-3xl max-w-lg w-full">
-                <CardHeader className="px-11 py-10">
+            <Card className="border-0 rounded-3xl max-w-[541px] w-full px-[45px] pt-8 pb-11">
+                <Logo />
+                <CardHeader className="">
                     <CardTitle>Авторизация</CardTitle>
                     <CardDescription>
                         Введите данные учетной записи для авторизации
@@ -80,18 +83,18 @@ export const Login = () => {
                 </CardHeader>
                 <form onSubmit={form.handleSubmit(onLogin)}>
                     <Form {...form}>
-                        <CardContent className="px-11 pt-0">
+                        <CardContent>
                             <LoginForm form={nestedForm(form, "login")} />
                             <LoadingButton
                                 type="submit"
-                                className="w-full mt-10 h-12"
+                                className="w-full mt-6 mb-8 h-[55px] text-[16px] text-[#021425]"
                                 loading={isLoading}
                             >
                                 Авторизаться
                             </LoadingButton>
                         </CardContent>
-                        <CardFooter className="flex flex-col gap-4 px-11">
-                            <div className="flex items-center justify-center w-full">
+                        <CardFooter className="flex flex-col gap-0">
+                            <div className="flex items-center justify-center w-full text-[13.5px] h-3 pb-6">
                                 <p>У вас нет учетной записи?</p>
                                 <Link to="/register">
                                     <Button variant={"link"}>
@@ -103,25 +106,26 @@ export const Login = () => {
                                 <div className="absolute inset-0 flex items-center">
                                     <span className="w-full border-t" />
                                 </div>
-                                <div className="relative flex justify-center text-xs uppercase">
+                                <div className="relative flex justify-center text-[13.5px] font-medium">
                                     <span className="bg-background px-2 text-muted-foreground">
                                         Помощь
                                     </span>
                                 </div>
                             </div>
-                            <div className="grid grid-cols-2 gap-2 w-full">
+                            <div className="grid grid-cols-2 gap-2 w-full mt-8">
                                 <a href="https://t.me/anatskoK" target="_blank">
                                     <Button
-                                        className="w-full h-12"
+                                        className="w-full h-12 text-[14px] font-normal gap-[7px]"
                                         variant={"outline"}
                                         type="button"
                                     >
+                                        <Telegram />
                                         @anatskoK
                                     </Button>
                                 </a>
                                 <a href="tel:+74951351660" target="_blank">
                                     <Button
-                                        className="w-full h-12"
+                                        className="w-full h-12 text-[14px] font-normal gap-[7px]"
                                         variant={"outline"}
                                         type="button"
                                     >
