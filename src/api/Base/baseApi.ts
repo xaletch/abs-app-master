@@ -5,7 +5,7 @@ export const baseApi = createApi({
     baseQuery: fetchBaseQuery({
         baseUrl: `https://admin.abc-data.ru`,
         headers: {
-            "content-type": "text/plain;charset=UTF-8",
+           "content-type": "application/json",
         },
         mode: "no-cors",
         credentials:"include"
