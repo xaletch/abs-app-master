@@ -7,7 +7,7 @@ export const baseApi = createApi({
         headers: {
            "content-type": "application/json",
         },
-        mode: "no-cors",
+        // mode: "no-cors",
         credentials:"include"
     }),
     reducerPath: "baseApi",
